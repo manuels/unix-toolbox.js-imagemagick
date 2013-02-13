@@ -1586,4 +1586,6 @@
 /* #undef volatile */
  
 /* once: _MAGICK_MAGICK_BASECONFIG_H */
+
+#define SSIZE_MAX INT_MAX
 #endif
