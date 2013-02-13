@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE configuremap [
+<!ELEMENT configuremap (configure)+>
+<!ELEMENT configure (#PCDATA)>
+<!ATTLIST configure name CDATA #REQUIRED>
+<!ATTLIST configure value CDATA #REQUIRED>
+]>
+<configuremap>
+  <configure name="CC" value="/home/manuel/lib/emscripten/emcc"/>
+  <configure name="CFLAGS" value="-I../libpng/src -Wall -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="CODER_PATH" value="/usr/local/lib/ImageMagick-6.8.1/modules-Q16/coders"/>
+  <configure name="CONFIGURE_PATH" value="/usr/local/etc/ImageMagick/"/>
+  <configure name="CONFIGURE" value="./configure  'CFLAGS=-I../libpng/src' '--disable-option-checking' '--disable-silent-rules' '--disable-dependency-tracking' '--disable-openmp' '--disable-opencl' '--disable-largefile' '--disable-shared' '--enable-static' '--disable-deprecated' '--disable-cipher' '--without-threads' '--with-modules' '--without-perl' '--without-umem' '--without-bzlib' '--without-x' '--without-zlib' '--without-autotrace' '--without-dps' '--without-djvu' '--without-fftw' '--without-fpx' '--without-fontconfig' '--without-freetype' '--without-gslib' '--without-gvc' '--without-jbig' '--without-jpeg' '--without-jp2' '--without-lcms' '--without-lcms2' '--without-lqr' '--without-lzma' '--without-openexr' '--without-pango' '--with-png' '--without-rsvg' '--without-tiff' '--without-webp' '--without-wmf' '--without-xml' 'CC=/home/manuel/lib/emscripten/emcc' 'CXX=/home/manuel/lib/emscripten/em++'"/>
+  <configure name="COPYRIGHT" value="Copyright (C) 1999-2013 ImageMagick Studio LLC"/>
+  <configure name="CPPFLAGS" value="-I/usr/local/include/ImageMagick"/>
+  <configure name="CXXFLAGS" value="-g -O2"/>
+  <configure name="CXX" value="/home/manuel/lib/emscripten/em++"/>
+  <configure name="DEFS" value="-DHAVE_CONFIG_H"/>
+  <configure name="DELEGATES" value="mpeg png ps zlib"/>
+  <configure name="DISTCHECK_CONFIG_FLAGS" value="'CC=/home/manuel/lib/emscripten/emcc' 'CFLAGS=-I../libpng/src' 'CXX=/home/manuel/lib/emscripten/em++' --disable-deprecated --with-quantum-depth=16 --with-umem=no --with-bzlib=no --with-zlib=no --with-autotrace=no --with-dps=no --with-djvu=no --with-fftw=no --with-fpx=no --with-fontconfig=no --with-freetype=no --with-gslib=no --with-fontpath= --with-gvc=no --with-jpeg=no --with-jp2=no --with-lcms=no --with-lcms2=no --with-lqr=no --with-lzma=no --with-openexr=no --with-pango=no --with-rsvg=no --with-tiff=no --with-webp=no --with-wmf=no --with-xml=no --with-perl=no"/>
+  <configure name="DOCUMENTATION_PATH" value="/usr/local/share/doc/ImageMagick-6.8.1"/>
+  <configure name="EXEC-PREFIX" value="/usr/local"/>
+  <configure name="EXECUTABLE_PATH" value="/usr/local/bin"/>
+  <configure name="FEATURES" value="DPC"/>
+  <configure name="FILTER_PATH" value="/usr/local/lib/ImageMagick-6.8.1/modules-Q16/filters"/>
+  <configure name="HOST" value="i686-pc-linux-gnu"/>
+  <configure name="INCLUDE_PATH" value="/usr/local/include/ImageMagick"/>
+  <configure name="LDFLAGS" value="-L/usr/local/lib "/>
+  <configure name="LIBRARY_PATH" value="/usr/local/lib/ImageMagick-6.8.1"/>
+  <configure name="LIBS" value="-lMagickCore -lpng -lz -lm"/>
+  <configure name="LIB_VERSION_NUMBER" value="6,8,1,10"/>
+  <configure name="LIB_VERSION" value="0x681"/>
+  <configure name="NAME" value="ImageMagick"/>
+  <configure name="PCFLAGS" value="-DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16"/>
+  <configure name="PREFIX" value="/usr/local"/>
+  <configure name="QuantumDepth" value="16"/>
+  <configure name="RELEASE_DATE" value="2013-02-13"/>
+  <configure name="SHAREARCH_PATH" value="/usr/local/lib/ImageMagick-6.8.1/config-Q16"/>
+  <configure name="SHARE_PATH" value="/usr/local/share/ImageMagick-6.8.1"/>
+  <configure name="SVN_REVISION" value="10665" />
+  <configure name="TARGET_CPU" value="i686"/>
+  <configure name="TARGET_OS" value="linux-gnu"/>
+  <configure name="TARGET_VENDOR" value="pc"/>
+  <configure name="VERSION" value="6.8.1"/>
+  <configure name="WEBSITE" value="http://www.imagemagick.org"/>
+</configuremap>
