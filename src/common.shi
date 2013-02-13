@@ -1,0 +1,21 @@
+# Test environment
+top_srcdir='/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src'
+top_builddir='/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src'
+
+set -a
+COMPARE="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/utilities/compare"
+COMPOSITE="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/utilities/composite"
+CONJURE="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/utilities/conjure"
+CONVERT="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/utilities/convert"
+DISPLAY="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/utilities/display"
+IDENTIFY="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/utilities/identify"
+MONTAGE="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/utilities/montage" 
+VALIDATE="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/tests/validate"
+DRAWTEST="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/tests/drawtest"
+WANDTEST="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/tests/wandtest"
+LD_LIBRARY_PATH="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/magick/.libs:${LD_LIBRARY_PATH}"
+MAGICK_CODER_MODULE_PATH="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/coders"
+MAGICK_CONFIGURE_PATH="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/config:/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/config"
+MAGICK_FILTER_MODULE_PATH="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/filters"
+PATH="/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/utilities:/home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/tests:${PATH}"
+set +a

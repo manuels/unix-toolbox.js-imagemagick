@@ -1,0 +1,10 @@
+prefix=/usr/local
+exec_prefix=${prefix}
+libdir=${exec_prefix}/lib
+includedir=${prefix}/include/ImageMagick
+
+Name: ImageMagick
+Description: ImageMagick - Convert, Edit, and Compose Images (ABI Q16)
+Version: 6.8.1
+Libs: -L${libdir} -lm -lMagickCore-Q16
+Cflags: -I${includedir} -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16
