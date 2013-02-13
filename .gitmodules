@@ -1,0 +1,3 @@
+[submodule "libpng"]
+	path = libpng
+	url = ../libpng
