@@ -1,3 +1,9 @@
 [submodule "libpng"]
 	path = libpng
 	url = ../libpng
+[submodule "toolbox-base"]
+	path = toolbox-base
+	url = ../../base
+[submodule "zlib"]
+	path = zlib
+	url = ../zlib
