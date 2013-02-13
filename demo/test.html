@@ -1,0 +1,20 @@
+<html>
+
+<script src="../toolbox-base/interface.js"></script>
+
+<script>
+  var convert = new Interface('../convert-worker.js');
+
+  convert.addUrl('demo/test.png', '/', 'test.png').then(function() {
+    convert.run('-rotate', '90', '/test.png', '/test-rotated-90.png').then(function() {
+      convert.getFile('/', 'test-rotated-90.png').then(function(contents) {
+        console.log(contents);
+      });
+    });
+  });
+</script>
+
+<body>
+</body>
+
+</html>
