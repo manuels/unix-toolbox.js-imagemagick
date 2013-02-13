@@ -290,9 +290,9 @@
 #endif
 
 /* Define to 1 if you have the `getdtablesize' function. */
-#ifndef MAGICKCORE_HAVE_GETDTABLESIZE
+/*#ifndef MAGICKCORE_HAVE_GETDTABLESIZE
 #define MAGICKCORE_HAVE_GETDTABLESIZE 1
-#endif
+#endif*/
 
 /* Define to 1 if you have the `getexecname' function. */
 /* #undef HAVE_GETEXECNAME */
@@ -451,9 +451,9 @@
 /* #undef HAVE_MMAP */
 
 /* Define to 1 if you have a working `mmap' system call. */
-#ifndef MAGICKCORE_HAVE_MMAP_FILEIO
+/*#ifndef MAGICKCORE_HAVE_MMAP_FILEIO
 #define MAGICKCORE_HAVE_MMAP_FILEIO 1
-#endif
+#endif*/
 
 /* Define to 1 if you have the `munmap' function. */
 #ifndef MAGICKCORE_HAVE_MUNMAP
@@ -471,9 +471,9 @@
 #endif
 
 /* Define to 1 if you have the `nanosleep' function. */
-#ifndef MAGICKCORE_HAVE_NANOSLEEP
+/*#ifndef MAGICKCORE_HAVE_NANOSLEEP
 #define MAGICKCORE_HAVE_NANOSLEEP 1
-#endif
+#endif*/
 
 /* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
 /* #undef HAVE_NDIR_H */
@@ -566,9 +566,9 @@
 #endif
 
 /* Define to 1 if you have the `raise' function. */
-#ifndef MAGICKCORE_HAVE_RAISE
+/*#ifndef MAGICKCORE_HAVE_RAISE
 #define MAGICKCORE_HAVE_RAISE 1
-#endif
+#endif*/
 
 /* Define to 1 if you have the `rand_r' function. */
 #ifndef MAGICKCORE_HAVE_RAND_R
