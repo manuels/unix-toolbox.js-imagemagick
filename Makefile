@@ -37,7 +37,7 @@ LIBPNG=${LIBPNG_PATH}/libpng15_la-pngerror.o \
 
 convert:
 	cp ${UTIL_PATH}/convert ${UTIL_PATH}/convert.bc
-	emcc -O0 -minify 0 --pre-js ./toolbox-base/pre.js ${UTIL_PATH}/convert.bc ${ZLIB} ${LIBPNG} -o convert-worker.js
+	emcc -O2 -minify 2 --pre-js ./toolbox-base/pre.js ${UTIL_PATH}/convert.bc ${ZLIB} ${LIBPNG} -o convert-worker.js
 
 all: convert
 
