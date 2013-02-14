@@ -163,7 +163,7 @@ foreach my $delegate (@tested_delegates) {
 # defaults for LIBS & INC & CCFLAGS params that we later pass to Writemakefile
 my $INC_magick = '-I../ -I.. -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16 -I"' . $Config{'usrinc'} . '/ImageMagick"';
 my $LIBS_magick = '-L../magick/.libs -lMagickCore-Q16 -lperl -lm';
-my $CCFLAGS_magick = "$Config{'ccflags'} -I../libpng/src -Wall -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16";
+my $CCFLAGS_magick = "$Config{'ccflags'} -I../libpng/src -I../libjpeg/src -Wall -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16";
 my $LDFLAGS_magick   = "-L../magick/.libs -lMagickCore-Q16 $Config{'ldflags'} ";
 my $LDDLFLAGS_magick = "-L../magick/.libs -lMagickCore-Q16 $Config{'lddlflags'} ";
 

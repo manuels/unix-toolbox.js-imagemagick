@@ -6,44 +6,40 @@
   var convert = new Interface('../convert-worker.js');
   convert.on_stdout = function(txt) { console.log(txt); };
   convert.on_stderr = function(txt) { console.log(txt); };
-  
 
   convert.mkdir('/', 'usr/local/etc/ImageMagick').then(function() {
-    convert.addUrl('./src/config/magic.xml', '/usr/local/etc/ImageMagick', 'magic.xml').then(function() {
-      convert.addUrl('./src/config/coder.xml', '/usr/local/etc/ImageMagick', 'coder.xml').then(function() {
-        convert.addUrl('./src/config/policy.xml', '/usr/local/etc/ImageMagick', 'policy.xml').then(function() {
-          convert.addUrl('./src/config/english.xml', '/usr/local/etc/ImageMagick', 'english.xml').then(function() {
-            convert.addUrl('./src/config/locale.xml', '/usr/local/etc/ImageMagick', 'locale.xml').then(function() {
+    convert.addUrl('./src/config/magic.xml',   '/usr/local/etc/ImageMagick', 'magic.xml');
+    convert.addUrl('./src/config/coder.xml',   '/usr/local/etc/ImageMagick', 'coder.xml');
+    convert.addUrl('./src/config/policy.xml',  '/usr/local/etc/ImageMagick', 'policy.xml');
+    convert.addUrl('./src/config/english.xml', '/usr/local/etc/ImageMagick', 'english.xml');
+    convert.addUrl('./src/config/locale.xml',  '/usr/local/etc/ImageMagick', 'locale.xml');
 
-              convert.addUrl('demo/test.png', '/', 'test.png').then(function() {
-                convert.addUrl('demo/test-rotated.png', '/', 'test-expected-rotated-90.png').then(function() {
-                  convert.run('-rotate', '90', '/test.png', '/test-rotated-90.png').then(function() {
-                    convert.getFile('/', 'test-rotated-90.png').then(function(real_contents) {
-                      convert.getFile('/', 'test-expected-rotated-90.png').then(function(expected_contents) {
-                        console.log(real_contents === expected_contents);
-                        if(real_contents !== expected_contents) {
-                          var body = document.getElementsByTagName("body")[0];
+    convert.addUrl('demo/test.png', '/', 'test.png');
+    convert.addUrl('demo/test-rotated.png', '/', 'test-expected-rotated-90.png');
 
-                          var img_received = document.createElement("img");
-                          img_received.src = "data:image/png;base64,"+window.btoa(real_contents);
+    convert.addDone().then(function() {
+      convert.run('-rotate', '90', '/test.png', '/test-rotated-90.png').then(function() {
+        convert.getFile('/', 'test-rotated-90.png').then(function(real_contents) {
+          convert.getFile('/', 'test-expected-rotated-90.png').then(function(expected_contents) {
+            console.log(real_contents === expected_contents);
+            if(real_contents !== expected_contents) {
+              var body = document.getElementsByTagName("body")[0];
 
-                          var img_expected = document.createElement("img");
-                          img_expected.src = "data:image/png;base64,"+window.btoa(expected_contents);
+              var img_received = document.createElement("img");
+              img_received.id = "received";
+              img_received.src = "data:image/png;base64,"+window.btoa(real_contents);
 
-                          body.appendChild(img_received);
-                          body.appendChild(img_expected);
-                        }
-                      });
-                    });
-                  });
-                });
-              });
+              var img_expected = document.createElement("img");
+              img_expected.src = "data:image/png;base64,"+window.btoa(expected_contents);
 
-            });
+              body.appendChild(img_received);
+              body.appendChild(img_expected);
+            }
           });
         });
       });
     });
+
   });
 </script>
 

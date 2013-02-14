@@ -34,10 +34,10 @@ extern "C" {
 #define MagickLibAddendum  "-10"
 #define MagickLibInterface  7
 #define MagickLibMinInterface  7
-#define MagickReleaseDate  "2013-02-13"
+#define MagickReleaseDate  "2013-02-14"
 #define MagickChangeDate   "20130108"
 #define MagickFeatures "DPC"
-#define MagickDelegates "mpeg png ps zlib"
+#define MagickDelegates "mpeg jng jpeg png ps tiff zlib"
 #define MagickHomeURL  "file:///usr/local/share/doc/ImageMagick-6.8.1/index.html"
 #define MagickAuthoritativeURL  "http://www.imagemagick.org"
 #if (MAGICKCORE_QUANTUM_DEPTH == 8)

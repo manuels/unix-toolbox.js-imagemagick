@@ -35,9 +35,11 @@ LIBPNG=${LIBPNG_PATH}/libpng15_la-pngerror.o \
   ${LIBPNG_PATH}/libpng15_la-pngwutil.o
 
 
-convert:
-	cp ${UTIL_PATH}/convert ${UTIL_PATH}/convert.bc
-	emcc -O2 -minify 2 --pre-js ./toolbox-base/pre.js ${UTIL_PATH}/convert.bc ${ZLIB} ${LIBPNG} -o convert-worker.js
+all: utils ;
 
-all: convert
+utils: compare composite conjure convert identify mogrify montage stream ;
+
+%:
+	cp ${UTIL_PATH}/$@ ${UTIL_PATH}/$@.bc
+	emcc -O2 -minify 1 --pre-js ./toolbox-base/pre.js ${UTIL_PATH}/$@.bc ${ZLIB} ${LIBPNG} -o $@.js
 

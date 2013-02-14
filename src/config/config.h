@@ -293,7 +293,7 @@
 /* #undef HAVE_MACH_O_DYLD_H */
 
 /* Define to 1 if <wchar.h> declares mbstate_t. */
-//#define HAVE_MBSTATE_T 1
+#define HAVE_MBSTATE_T 1
 
 /* Define to 1 if you have the `memmove' function. */
 #define HAVE_MEMMOVE 1
@@ -311,10 +311,10 @@
 /* #undef HAVE_MMAP */
 
 /* Define to 1 if you have a working `mmap' system call. */
-//#define HAVE_MMAP_FILEIO 1
+#define HAVE_MMAP_FILEIO 1
 
 /* Define to 1 if you have the `munmap' function. */
-//#define HAVE_MUNMAP 1
+#define HAVE_MUNMAP 1
 
 /* define if the compiler implements namespaces */
 #define HAVE_NAMESPACES /**/
@@ -341,37 +341,37 @@
 /* #undef HAVE_OS_H */
 
 /* Define to 1 if you have the `pclose' function. */
-//#define HAVE_PCLOSE 1
+#define HAVE_PCLOSE 1
 
 /* Define to 1 if you have the `poll' function. */
-//#define HAVE_POLL 1
+#define HAVE_POLL 1
 
 /* Define to 1 if you have the `popen' function. */
-//#define HAVE_POPEN 1
+#define HAVE_POPEN 1
 
 /* Define to 1 if you have the `posix_fadvise' function. */
-//#define HAVE_POSIX_FADVISE 1
+#define HAVE_POSIX_FADVISE 1
 
 /* Define to 1 if you have the `posix_fallocate' function. */
-//#define HAVE_POSIX_FALLOCATE 1
+#define HAVE_POSIX_FALLOCATE 1
 
 /* Define to 1 if you have the `posix_madvise' function. */
-//#define HAVE_POSIX_MADVISE 1
+#define HAVE_POSIX_MADVISE 1
 
 /* Define to 1 if you have the `posix_memalign' function. */
-//#define HAVE_POSIX_MEMALIGN 1
+#define HAVE_POSIX_MEMALIGN 1
 
 /* Define to 1 if you have the `posix_spawnp' function. */
-//#define HAVE_POSIX_SPAWNP 1
+#define HAVE_POSIX_SPAWNP 1
 
 /* Define to 1 if you have the `pow' function. */
 #define HAVE_POW 1
 
 /* Define to 1 if you have the `pread' function. */
-//#define HAVE_PREAD 1
+#define HAVE_PREAD 1
 
 /* Define to 1 if you have the <process.h> header file. */
-//#define HAVE_PROCESS_H 1
+#define HAVE_PROCESS_H 1
 
 /* Define if you have POSIX threads libraries and header files. */
 /* #undef HAVE_PTHREAD */
@@ -380,7 +380,7 @@
 /* #undef HAVE_PTHREAD_PRIO_INHERIT */
 
 /* Define to 1 if you have the `pwrite' function. */
-//#define HAVE_PWRITE 1
+#define HAVE_PWRITE 1
 
 /* Define to 1 if you have the `qsort_r' function. */
 #define HAVE_QSORT_R 1
@@ -577,31 +577,31 @@
 #define HAVE_TEMPNAM 1
 
 /* Define to 1 if you have the <tiffconf.h> header file. */
-/* #undef HAVE_TIFFCONF_H */
+#define HAVE_TIFFCONF_H 1
 
 /* Define to 1 if you have the `TIFFIsBigEndian' function. */
-/* #undef HAVE_TIFFISBIGENDIAN */
+#define HAVE_TIFFISBIGENDIAN 1
 
 /* Define to 1 if you have the `TIFFIsCODECConfigured' function. */
-/* #undef HAVE_TIFFISCODECCONFIGURED */
+#define HAVE_TIFFISCODECCONFIGURED 1
 
 /* Define to 1 if you have the `TIFFMergeFieldInfo' function. */
-/* #undef HAVE_TIFFMERGEFIELDINFO */
+#define HAVE_TIFFMERGEFIELDINFO 1
 
 /* Define to 1 if you have the `TIFFReadEXIFDirectory' function. */
-/* #undef HAVE_TIFFREADEXIFDIRECTORY */
+#define HAVE_TIFFREADEXIFDIRECTORY 1
 
 /* Define to 1 if you have the `TIFFSetErrorHandlerExt' function. */
-/* #undef HAVE_TIFFSETERRORHANDLEREXT */
+#define HAVE_TIFFSETERRORHANDLEREXT 1
 
 /* Define to 1 if you have the `TIFFSetTagExtender' function. */
-/* #undef HAVE_TIFFSETTAGEXTENDER */
+#define HAVE_TIFFSETTAGEXTENDER 1
 
 /* Define to 1 if you have the `TIFFSetWarningHandlerExt' function. */
-/* #undef HAVE_TIFFSETWARNINGHANDLEREXT */
+#define HAVE_TIFFSETWARNINGHANDLEREXT 1
 
 /* Define to 1 if you have the `TIFFSwabArrayOfTriples' function. */
-/* #undef HAVE_TIFFSWABARRAYOFTRIPLES */
+#define HAVE_TIFFSWABARRAYOFTRIPLES 1
 
 /* Define to 1 if you have the `times' function. */
 #define HAVE_TIMES 1
@@ -729,7 +729,7 @@
 /* #undef JP2_DELEGATE */
 
 /* Define if you have JPEG library */
-/* #undef JPEG_DELEGATE */
+#define JPEG_DELEGATE 1
 
 /* Define if you have LCMS (v1.11 or later) library */
 /* #undef LCMS_DELEGATE */
@@ -916,7 +916,7 @@
 /* #undef THREAD_SUPPORT */
 
 /* Define if you have TIFF library */
-/* #undef TIFF_DELEGATE */
+#define TIFF_DELEGATE 1
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 #define TIME_WITH_SYS_TIME 1

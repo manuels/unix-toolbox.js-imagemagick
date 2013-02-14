@@ -290,9 +290,9 @@
 #endif
 
 /* Define to 1 if you have the `getdtablesize' function. */
-/*#ifndef MAGICKCORE_HAVE_GETDTABLESIZE
+#ifndef MAGICKCORE_HAVE_GETDTABLESIZE
 #define MAGICKCORE_HAVE_GETDTABLESIZE 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the `getexecname' function. */
 /* #undef HAVE_GETEXECNAME */
@@ -451,9 +451,9 @@
 /* #undef HAVE_MMAP */
 
 /* Define to 1 if you have a working `mmap' system call. */
-/*#ifndef MAGICKCORE_HAVE_MMAP_FILEIO
+#ifndef MAGICKCORE_HAVE_MMAP_FILEIO
 #define MAGICKCORE_HAVE_MMAP_FILEIO 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the `munmap' function. */
 #ifndef MAGICKCORE_HAVE_MUNMAP
@@ -471,9 +471,9 @@
 #endif
 
 /* Define to 1 if you have the `nanosleep' function. */
-/*#ifndef MAGICKCORE_HAVE_NANOSLEEP
+#ifndef MAGICKCORE_HAVE_NANOSLEEP
 #define MAGICKCORE_HAVE_NANOSLEEP 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the <ndir.h> header file, and it defines `DIR'. */
 /* #undef HAVE_NDIR_H */
@@ -495,44 +495,44 @@
 /* #undef HAVE_OS_H */
 
 /* Define to 1 if you have the `pclose' function. */
-/*#ifndef MAGICKCORE_HAVE_PCLOSE
+#ifndef MAGICKCORE_HAVE_PCLOSE
 #define MAGICKCORE_HAVE_PCLOSE 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the `poll' function. */
-/*#ifndef MAGICKCORE_HAVE_POLL
+#ifndef MAGICKCORE_HAVE_POLL
 #define MAGICKCORE_HAVE_POLL 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the `popen' function. */
-/*#ifndef MAGICKCORE_HAVE_POPEN
+#ifndef MAGICKCORE_HAVE_POPEN
 #define MAGICKCORE_HAVE_POPEN 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the `posix_fadvise' function. */
-/*#ifndef MAGICKCORE_HAVE_POSIX_FADVISE
+#ifndef MAGICKCORE_HAVE_POSIX_FADVISE
 #define MAGICKCORE_HAVE_POSIX_FADVISE 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the `posix_fallocate' function. */
-//#ifndef MAGICKCORE_HAVE_POSIX_FALLOCATE
-//#define MAGICKCORE_HAVE_POSIX_FALLOCATE 1
-//#endif
+#ifndef MAGICKCORE_HAVE_POSIX_FALLOCATE
+#define MAGICKCORE_HAVE_POSIX_FALLOCATE 1
+#endif
 
 /* Define to 1 if you have the `posix_madvise' function. */
-//#ifndef MAGICKCORE_HAVE_POSIX_MADVISE
-//#define MAGICKCORE_HAVE_POSIX_MADVISE 1
-//#endif
+#ifndef MAGICKCORE_HAVE_POSIX_MADVISE
+#define MAGICKCORE_HAVE_POSIX_MADVISE 1
+#endif
 
 /* Define to 1 if you have the `posix_memalign' function. */
-//#ifndef MAGICKCORE_HAVE_POSIX_MEMALIGN
-//#define MAGICKCORE_HAVE_POSIX_MEMALIGN 1
-//#endif
+#ifndef MAGICKCORE_HAVE_POSIX_MEMALIGN
+#define MAGICKCORE_HAVE_POSIX_MEMALIGN 1
+#endif
 
 /* Define to 1 if you have the `posix_spawnp' function. */
-/*#ifndef MAGICKCORE_HAVE_POSIX_SPAWNP
+#ifndef MAGICKCORE_HAVE_POSIX_SPAWNP
 #define MAGICKCORE_HAVE_POSIX_SPAWNP 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the `pow' function. */
 #ifndef MAGICKCORE_HAVE_POW
@@ -556,9 +556,9 @@
 /* #undef HAVE_PTHREAD_PRIO_INHERIT */
 
 /* Define to 1 if you have the `pwrite' function. */
-/*#ifndef MAGICKCORE_HAVE_PWRITE
+#ifndef MAGICKCORE_HAVE_PWRITE
 #define MAGICKCORE_HAVE_PWRITE 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the `qsort_r' function. */
 #ifndef MAGICKCORE_HAVE_QSORT_R
@@ -566,9 +566,9 @@
 #endif
 
 /* Define to 1 if you have the `raise' function. */
-/*#ifndef MAGICKCORE_HAVE_RAISE
+#ifndef MAGICKCORE_HAVE_RAISE
 #define MAGICKCORE_HAVE_RAISE 1
-#endif*/
+#endif
 
 /* Define to 1 if you have the `rand_r' function. */
 #ifndef MAGICKCORE_HAVE_RAND_R
@@ -865,31 +865,49 @@
 #endif
 
 /* Define to 1 if you have the <tiffconf.h> header file. */
-/* #undef HAVE_TIFFCONF_H */
+#ifndef MAGICKCORE_HAVE_TIFFCONF_H
+#define MAGICKCORE_HAVE_TIFFCONF_H 1
+#endif
 
 /* Define to 1 if you have the `TIFFIsBigEndian' function. */
-/* #undef HAVE_TIFFISBIGENDIAN */
+#ifndef MAGICKCORE_HAVE_TIFFISBIGENDIAN
+#define MAGICKCORE_HAVE_TIFFISBIGENDIAN 1
+#endif
 
 /* Define to 1 if you have the `TIFFIsCODECConfigured' function. */
-/* #undef HAVE_TIFFISCODECCONFIGURED */
+#ifndef MAGICKCORE_HAVE_TIFFISCODECCONFIGURED
+#define MAGICKCORE_HAVE_TIFFISCODECCONFIGURED 1
+#endif
 
 /* Define to 1 if you have the `TIFFMergeFieldInfo' function. */
-/* #undef HAVE_TIFFMERGEFIELDINFO */
+#ifndef MAGICKCORE_HAVE_TIFFMERGEFIELDINFO
+#define MAGICKCORE_HAVE_TIFFMERGEFIELDINFO 1
+#endif
 
 /* Define to 1 if you have the `TIFFReadEXIFDirectory' function. */
-/* #undef HAVE_TIFFREADEXIFDIRECTORY */
+#ifndef MAGICKCORE_HAVE_TIFFREADEXIFDIRECTORY
+#define MAGICKCORE_HAVE_TIFFREADEXIFDIRECTORY 1
+#endif
 
 /* Define to 1 if you have the `TIFFSetErrorHandlerExt' function. */
-/* #undef HAVE_TIFFSETERRORHANDLEREXT */
+#ifndef MAGICKCORE_HAVE_TIFFSETERRORHANDLEREXT
+#define MAGICKCORE_HAVE_TIFFSETERRORHANDLEREXT 1
+#endif
 
 /* Define to 1 if you have the `TIFFSetTagExtender' function. */
-/* #undef HAVE_TIFFSETTAGEXTENDER */
+#ifndef MAGICKCORE_HAVE_TIFFSETTAGEXTENDER
+#define MAGICKCORE_HAVE_TIFFSETTAGEXTENDER 1
+#endif
 
 /* Define to 1 if you have the `TIFFSetWarningHandlerExt' function. */
-/* #undef HAVE_TIFFSETWARNINGHANDLEREXT */
+#ifndef MAGICKCORE_HAVE_TIFFSETWARNINGHANDLEREXT
+#define MAGICKCORE_HAVE_TIFFSETWARNINGHANDLEREXT 1
+#endif
 
 /* Define to 1 if you have the `TIFFSwabArrayOfTriples' function. */
-/* #undef HAVE_TIFFSWABARRAYOFTRIPLES */
+#ifndef MAGICKCORE_HAVE_TIFFSWABARRAYOFTRIPLES
+#define MAGICKCORE_HAVE_TIFFSWABARRAYOFTRIPLES 1
+#endif
 
 /* Define to 1 if you have the `times' function. */
 #ifndef MAGICKCORE_HAVE_TIMES
@@ -1069,7 +1087,9 @@
 /* #undef JP2_DELEGATE */
 
 /* Define if you have JPEG library */
-/* #undef JPEG_DELEGATE */
+#ifndef MAGICKCORE_JPEG_DELEGATE
+#define MAGICKCORE_JPEG_DELEGATE 1
+#endif
 
 /* Define if you have LCMS (v1.11 or later) library */
 /* #undef LCMS_DELEGATE */
@@ -1340,7 +1360,9 @@
 /* #undef THREAD_SUPPORT */
 
 /* Define if you have TIFF library */
-/* #undef TIFF_DELEGATE */
+#ifndef MAGICKCORE_TIFF_DELEGATE
+#define MAGICKCORE_TIFF_DELEGATE 1
+#endif
 
 /* Define to 1 if you can safely include both <sys/time.h> and <time.h>. */
 #ifndef MAGICKCORE_TIME_WITH_SYS_TIME
@@ -1586,6 +1608,4 @@
 /* #undef volatile */
  
 /* once: _MAGICK_MAGICK_BASECONFIG_H */
-
-#define SSIZE_MAX INT_MAX
 #endif

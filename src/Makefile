@@ -597,8 +597,8 @@ coders_ept_la_OBJECTS = $(am_coders_ept_la_OBJECTS)
 coders_ept_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC $(AM_LIBTOOLFLAGS) \
 	$(LIBTOOLFLAGS) --mode=link $(CCLD) $(AM_CFLAGS) $(CFLAGS) \
 	$(coders_ept_la_LDFLAGS) $(LDFLAGS) -o $@
-##am_coders_ept_la_rpath =  \
-##	-rpath $(codersdir)
+#am_coders_ept_la_rpath =  \
+#	-rpath $(codersdir)
 coders_exr_la_DEPENDENCIES = $(MAGICKCORE_LIBS) $(am__DEPENDENCIES_1) \
 	$(am__DEPENDENCIES_1)
 am_coders_exr_la_OBJECTS = coders/coders_exr_la-exr.lo
@@ -766,8 +766,8 @@ coders_jpeg_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(AM_CFLAGS) $(CFLAGS) $(coders_jpeg_la_LDFLAGS) $(LDFLAGS) -o \
 	$@
-##am_coders_jpeg_la_rpath =  \
-##	-rpath $(codersdir)
+#am_coders_jpeg_la_rpath =  \
+#	-rpath $(codersdir)
 coders_label_la_DEPENDENCIES = $(MAGICKCORE_LIBS) \
 	$(am__DEPENDENCIES_1)
 am_coders_label_la_OBJECTS = coders/coders_label_la-label.lo
@@ -1166,8 +1166,8 @@ coders_tiff_la_LINK = $(LIBTOOL) $(AM_V_lt) --tag=CC \
 	$(AM_LIBTOOLFLAGS) $(LIBTOOLFLAGS) --mode=link $(CCLD) \
 	$(AM_CFLAGS) $(CFLAGS) $(coders_tiff_la_LDFLAGS) $(LDFLAGS) -o \
 	$@
-##am_coders_tiff_la_rpath =  \
-##	-rpath $(codersdir)
+#am_coders_tiff_la_rpath =  \
+#	-rpath $(codersdir)
 coders_tile_la_DEPENDENCIES = $(MAGICKCORE_LIBS)
 am_coders_tile_la_OBJECTS = coders/coders_tile_la-tile.lo
 coders_tile_la_OBJECTS = $(am_coders_tile_la_OBJECTS)
@@ -1558,11 +1558,11 @@ am__objects_1 = magick/magick_libMagickCore_Q16_la-accelerate.lo \
 #am__objects_7 = coders/magick_libMagickCore_Q16_la-clipboard.lo \
 #	coders/magick_libMagickCore_Q16_la-emf.lo
 #am__objects_8 = coders/magick_libMagickCore_Q16_la-jbig.lo
-#am__objects_9 = coders/magick_libMagickCore_Q16_la-jpeg.lo
+am__objects_9 = coders/magick_libMagickCore_Q16_la-jpeg.lo
 #am__objects_10 = coders/magick_libMagickCore_Q16_la-jp2.lo
 am__objects_11 = coders/magick_libMagickCore_Q16_la-png.lo
-#am__objects_12 = coders/magick_libMagickCore_Q16_la-ept.lo \
-#	coders/magick_libMagickCore_Q16_la-tiff.lo
+am__objects_12 = coders/magick_libMagickCore_Q16_la-ept.lo \
+	coders/magick_libMagickCore_Q16_la-tiff.lo
 #am__objects_13 = coders/magick_libMagickCore_Q16_la-webp.lo
 #am__objects_14 = coders/magick_libMagickCore_Q16_la-wmf.lo
 #am__objects_15 = coders/magick_libMagickCore_Q16_la-x.lo \
@@ -2449,13 +2449,13 @@ CAIRO_SVG_LIBS =
 CC = /home/manuel/lib/emscripten/emcc
 CCDEPMODE = depmode=none
 CCMALLOCDelegate = 
-CFLAGS = -I../libpng/src -Wall -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16
+CFLAGS = -I../libpng/src -I../libjpeg/src -Wall -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16
 CGMDecodeDelegate = ralcgm
 CL_CFLAGS = 
 CL_LIBS = 
 CODER_DIRNAME = coders
 CODER_PATH = /usr/local/lib/ImageMagick-6.8.1/modules-Q16/coders
-CONFIGURE_ARGS = ./configure  'CFLAGS=-I../libpng/src' '--disable-option-checking' '--disable-silent-rules' '--disable-dependency-tracking' '--disable-openmp' '--disable-opencl' '--disable-largefile' '--disable-shared' '--enable-static' '--disable-deprecated' '--disable-cipher' '--without-threads' '--with-modules' '--without-perl' '--without-umem' '--without-bzlib' '--without-x' '--without-zlib' '--without-autotrace' '--without-dps' '--without-djvu' '--without-fftw' '--without-fpx' '--without-fontconfig' '--without-freetype' '--without-gslib' '--without-gvc' '--without-jbig' '--without-jpeg' '--without-jp2' '--without-lcms' '--without-lcms2' '--without-lqr' '--without-lzma' '--without-openexr' '--without-pango' '--with-png' '--without-rsvg' '--without-tiff' '--without-webp' '--without-wmf' '--without-xml' 'CC=/home/manuel/lib/emscripten/emcc' 'CXX=/home/manuel/lib/emscripten/em++'
+CONFIGURE_ARGS = ./configure  'CFLAGS=-I../libpng/src -I../libjpeg/src' '--disable-option-checking' '--disable-silent-rules' '--disable-dependency-tracking' '--disable-openmp' '--disable-opencl' '--disable-largefile' '--disable-shared' '--enable-static' '--disable-deprecated' '--disable-cipher' '--without-threads' '--with-modules' '--without-perl' '--without-umem' '--without-bzlib' '--without-x' '--with-zlib' '--without-autotrace' '--without-dps' '--without-djvu' '--without-fftw' '--without-fpx' '--without-fontconfig' '--without-freetype' '--without-gslib' '--without-gvc' '--without-jbig' '--with-jpeg' '--without-jp2' '--without-lcms' '--without-lcms2' '--without-lqr' '--without-lzma' '--without-openexr' '--without-pango' '--with-png' '--without-rsvg' '--with-tiff' '--without-webp' '--without-wmf' '--without-xml' 'CC=/home/manuel/lib/emscripten/emcc' 'CXX=/home/manuel/lib/emscripten/em++'
 CONFIGURE_PATH = /usr/local/etc/ImageMagick/
 CONFIG_STATUS_DEPENDENCIES = $(top_srcdir)/version.sh
 CPP = /home/manuel/lib/emscripten/emcc -E
@@ -2471,7 +2471,7 @@ DATA_DIR = /usr/local/share
 DEFS = -DHAVE_CONFIG_H
 DEPDIR = .deps
 DIRSEP = :
-DISTCHECK_CONFIG_FLAGS = 'CC=/home/manuel/lib/emscripten/emcc' 'CFLAGS=-I../libpng/src' 'CXX=/home/manuel/lib/emscripten/em++' --disable-deprecated --with-quantum-depth=16 --with-umem=no --with-bzlib=no --with-zlib=no --with-autotrace=no --with-dps=no --with-djvu=no --with-fftw=no --with-fpx=no --with-fontconfig=no --with-freetype=no --with-gslib=no --with-fontpath= --with-gvc=no --with-jpeg=no --with-jp2=no --with-lcms=no --with-lcms2=no --with-lqr=no --with-lzma=no --with-openexr=no --with-pango=no --with-rsvg=no --with-tiff=no --with-webp=no --with-wmf=no --with-xml=no --with-perl=no
+DISTCHECK_CONFIG_FLAGS = 'CC=/home/manuel/lib/emscripten/emcc' 'CFLAGS=-I../libpng/src -I../libjpeg/src' 'CXX=/home/manuel/lib/emscripten/em++' --disable-deprecated --with-quantum-depth=16 --with-umem=no --with-bzlib=no --with-autotrace=no --with-dps=no --with-djvu=no --with-fftw=no --with-fpx=no --with-fontconfig=no --with-freetype=no --with-gslib=no --with-fontpath= --with-gvc=no --with-jp2=no --with-lcms=no --with-lcms2=no --with-lqr=no --with-lzma=no --with-openexr=no --with-pango=no --with-rsvg=no --with-webp=no --with-wmf=no --with-xml=no --with-perl=no
 DJVU_LIBS = 
 DLLTOOL = false
 DNGDecodeDelegate = ufraw-batch
@@ -2538,7 +2538,7 @@ INT64_T = signed long long
 INT8_T = signed char
 JBIG_LIBS = 
 JP2_LIBS = 
-JPEG_LIBS = 
+JPEG_LIBS = -ljpeg
 LCMS_LIBS = 
 LD = /home/manuel/lib/emscripten/emcc
 LDFLAGS = 
@@ -2568,14 +2568,14 @@ LZMA_LIBS =
 LaunchDelegate = gimp
 MAGICKCORE_PATH = /usr/local/lib
 MAGICK_ABI_SUFFIX = Q16
-MAGICK_CFLAGS = -I../libpng/src -Wall -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16
+MAGICK_CFLAGS = -I../libpng/src -I../libjpeg/src -Wall -DMAGICKCORE_HDRI_ENABLE=0 -DMAGICKCORE_QUANTUM_DEPTH=16
 MAGICK_CODER_MODULE_PATH = /home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/coders
 MAGICK_CONFIGURE_BUILD_PATH = /home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/config
 MAGICK_CONFIGURE_SRC_PATH = /home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/config
 MAGICK_CPPFLAGS = -I/usr/local/include/ImageMagick
 MAGICK_CXXFLAGS = -g -O2
-MAGICK_DELEGATES = mpeg png ps zlib
-MAGICK_DEP_LIBS = -lpng -lz -lm
+MAGICK_DELEGATES = mpeg jng jpeg png ps tiff zlib
+MAGICK_DEP_LIBS = -ltiff -ljpeg -lpng -lz -lm
 MAGICK_FEATURES = DPC
 MAGICK_FILTER_MODULE_PATH = /home/manuel/Projekte/unix-toolbox.js/modules/imagemagick/src/filters
 MAGICK_HDRI = 
@@ -2585,7 +2585,7 @@ MAGICK_LIBRARY_CURRENT = 7
 MAGICK_LIBRARY_CURRENT_MIN = 7
 MAGICK_LIBRARY_REVISION = 0
 MAGICK_LIBRARY_VERSION_INFO = 7:0:0
-MAGICK_LIBS = -lMagickCore -lpng -lz -lm
+MAGICK_LIBS = -lMagickCore -ltiff -ljpeg -lpng -lz -lm
 MAGICK_LIB_VERSION = 0x070000
 MAGICK_LIB_VERSION_NUMBER = 7,0,0
 MAGICK_LIB_VERSION_TEXT = 6.8.1
@@ -2632,7 +2632,7 @@ PACKAGE_LIB_VERSION_NUMBER = 6,8,1,10
 PACKAGE_NAME = ImageMagick
 PACKAGE_PERL_VERSION = 6.81
 PACKAGE_RELEASE = 10
-PACKAGE_RELEASE_DATE = 2013-02-13
+PACKAGE_RELEASE_DATE = 2013-02-14
 PACKAGE_STRING = ImageMagick 6.8.1
 PACKAGE_TARNAME = ImageMagick
 PACKAGE_URL = 
@@ -2690,7 +2690,7 @@ SYSCONF_DIR = /usr/local/etc
 ShowImageDelegate = 
 TAR = tar
 THREAD_LIBS = 
-TIFF_LIBS = 
+TIFF_LIBS = -ltiff
 TXTDelegate = enscript
 UINT16_T = unsigned short
 UINT32_F = ""
@@ -2975,14 +2975,14 @@ codersdir = $(CODER_PATH)
 #MAGICK_FPX_SRCS = coders/fpx.c
 #MAGICK_JBIG_MODULES = coders/jbig.la
 #MAGICK_JBIG_SRCS = coders/jbig.c
-#MAGICK_JPEG_MODULES = coders/jpeg.la
-#MAGICK_JPEG_SRCS = coders/jpeg.c
+MAGICK_JPEG_MODULES = coders/jpeg.la
+MAGICK_JPEG_SRCS = coders/jpeg.c
 #MAGICK_JP2_MODULES = coders/jp2.la
 #MAGICK_JP2_SRCS = coders/jp2.c
 MAGICK_PNG_MODULES = coders/png.la
 MAGICK_PNG_SRCS = coders/png.c
-#MAGICK_TIFF_MODULES = coders/ept.la coders/tiff.la
-#MAGICK_TIFF_SRCS = coders/ept.c coders/tiff.c
+MAGICK_TIFF_MODULES = coders/ept.la coders/tiff.la
+MAGICK_TIFF_SRCS = coders/ept.c coders/tiff.c
 #MAGICK_WEBP_MODULES = coders/webp.la
 #MAGICK_WEBP_SRCS = coders/webp.c
 #MAGICK_GDI32_MODULES = coders/clipboard.la coders/emf.la
