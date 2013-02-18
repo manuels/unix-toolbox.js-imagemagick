@@ -104,4 +104,4 @@ utils: compare composite conjure convert identify mogrify montage stream ;
 
 %:
 	cp ${UTIL_PATH}/$@ ${UTIL_PATH}/$@.bc
-	emcc -O2 -minify 1 --pre-js ./toolbox-base/pre.js ${UTIL_PATH}/$@.bc ${ZLIB} ${LIBPNG} ${LIBJPEG} ${LIBTIFF} -o $@.js
+	emcc -O2 -minify 1 --pre-js ./toolbox-base/pre.js ${UTIL_PATH}/$@.bc ${ZLIB} ${LIBPNG} ${LIBJPEG} ${LIBTIFF} -o $@-worker.js
