@@ -1,15 +1,15 @@
 [submodule "libpng"]
 	path = libpng
-	url = ../libpng
+	url = git://github.com/manuels/unix-toolbox.js-libpng.git
 [submodule "toolbox-base"]
 	path = toolbox-base
-	url = ../../base
+	url = git://github.com/manuels/unix-toolbox.js-base.git
 [submodule "zlib"]
 	path = zlib
-	url = ../zlib
+	url = git://github.com/manuels/unix-toolbox.js-zlib.git
 [submodule "libjpeg"]
 	path = libjpeg
-	url = ../libjpeg
+	url = git://github.com/manuels/unix-toolbox.js-libjpeg.git
 [submodule "libtiff"]
 	path = libtiff
-	url = ../libtiff
+	url = git://github.com/manuels/unix-toolbox.js-libtiff.git
